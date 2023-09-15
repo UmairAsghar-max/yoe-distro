@@ -37,9 +37,9 @@ jobs:
               echo "Pull Request already exists!"
               exit 0
             else
-              git commit -am "Update open source layers reference"
+              git commit -am "Update open source layers reference" -m "Body" -m "[Neext-2121]"
               git push origin feature/layers-ref-update
-              gh pr create --title "Update open source layers reference \n Body \n \[Neext-2121\]" --body "Update open source layers reference" --base ${GITHUB_REF#refs/heads/} --reviewer $reviewer1
+              gh pr create --title "Update open source layers reference" --body "Update open source layers reference" --base ${GITHUB_REF#refs/heads/} --reviewer $reviewer1
             fi
           else
             echo "Everything already uptodate, Nothing to Commit"

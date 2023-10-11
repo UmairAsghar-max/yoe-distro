@@ -22,7 +22,7 @@ jobs:
           git submodule update --init --recursive
 
           echo "=================================================================================="
-          gh repo sync https://github.com/UmairAsghar-max/yoe-distro.git
+          gh repo sync git@github.com:UmairAsghar-max/yoe-distro.git
           echo "=================================================================================="
 
           git submodule foreach '

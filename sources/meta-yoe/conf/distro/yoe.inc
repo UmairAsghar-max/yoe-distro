@@ -6,8 +6,8 @@ MAINTAINER = "Yoe Distro Community <http://yoedistro.org>"
 TARGET_VENDOR = "-yoe"
 SDK_VENDOR = "-yoesdk"
 # Distro version is YYYY.MM
-DISTRO_VERSION = "2023.08"
-DISTRO_CODENAME = "Faeroes"
+DISTRO_VERSION = "2023.09"
+DISTRO_CODENAME = "Galway"
 SDK_VERSION := "${DISTRO_VERSION}"
 
 SDK_NAME_PREFIX = "yoe"
@@ -45,7 +45,7 @@ BB_SIGNATURE_HANDLER = "OEEquivHash"
 # Start a local hashserver instance
 BB_HASHSERVE = "auto"
 #BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
-#SSTATE_MIRRORS ?= "file://.* https://sstate.yoctoproject.org/all/PATH;downloadfilename=PATH"
+#SSTATE_MIRRORS ?= "file://.*  https://cdn.jsdelivr.net/yocto/sstate/all/PATH;downloadfilename=PATH"
 # see https://docs.yoctoproject.org/bitbake/2.0/bitbake-user-manual/bitbake-user-manual-ref-variables.html#term-BB_GIT_SHALLOW
 BB_GIT_SHALLOW = "1"
 

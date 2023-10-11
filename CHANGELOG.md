@@ -6,7 +6,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2023.09] - 2023-09-XX
+## [2023.10] - 2023-xx-yy
+
+### Changed
+
+- Upgrade clang to 17.0.2
+- Fix libcgroup and kernel-selftest to build with lld linker
+- Fix ptest images to match core layer naming convention
+- Fix ptest reporting issues in meta-oe packages
+- Upgrade mason to 1.2.2
+- Upgrade u-boot to 2023.10
+- Add 6.5 kernel and switch to using it as default for qemu machines
+- Add kernel-selftest to slow ptest image for x86 and enable bpf tests
+- Upgrade cryptodev to build with kernel 6.5
+- Use ttyrun to get getty on busybox init and sysvinit init systems
+
+### Added
+
+- Added recipes - tayga, ttyrun
+- Add bblock feature to core
+
+### Removed
+
+## [2023.09] - 2023-09-30
 
 ### Changed
 
@@ -30,11 +52,36 @@ and this project adheres to
 - Switch to using "nanbield" layer series compat
 - Update VisionFive2 SDK to V3.6.1
 - Fix -fstack-protector GCC on aarch64
+- Mark RISCV32 incompatible architecture in goarch.bbclass
+- Upgrade coreutils to 9.4
+- Add ptest support to mariadb
+- Enable 64 bit shell arithmetic in busybox, helps 64bit time_t
+- Fix build race in piglit and groff
+- Use mtime checks instead of inotify in bitbake
+- Use 64 bit integers across all targets in perl
+- Upgrade clang to 17.0 major release series
+- Upgrade gnome recipes to 45.0
+- Update linux-raspberrypi kernel to 6.1.54
+- Update OpenSSL to 3.1.3
+- Improve oeqa/runtime/parselogs
+- Enable yocto sstate feed server
+- Upgrade to systemd 254.4
+- Reduce debuf info size of webkitgtk3 and webkitgtk
+- Fix mesa to build with LLVM 17
+- Fix recipes to build with kernel 6.5
+- Add missing upstream status for all recipes in meta-openembedded
+- Update nodejs to 20.5.1
+- Bump VF2 SDK to v3.7.5
 
 ### Added
 
 - Added new recipes
-  - microcom, vsomeip, libei
+  - microcom, vsomeip, libei, python3-apiflask
+    python3-webargs, python3-flask-httpauth, python3-apispec
+    python3-flask-marshmallow, webrtc-audio-processing, python3-flask-jwt-extended
+    tecla, python3-pyu2f, python3-uritools, python3-beartype, musl-legacy-error
+    python3-spdx-tools, python3-flask-cors, python3-boto3, python3-botocore
+    python3-nacl 
 - Add gpt-hybrid partition layout to wic
 - Enable generating spdx manifest by default
 

@@ -21,7 +21,7 @@ jobs:
           git checkout -b feature/layers-ref-update
           git submodule update --init --recursive
 
-          gh repo sync https://github.com/YoeDistro/yoe-distro.git
+          gh repo sync https://github.com/UmairAsghar-max/yoe-distro.git
 
           git submodule foreach '
               latest_release=$(git tag --sort=committerdate | grep -E '[0-9]' | tail -1)
@@ -34,7 +34,7 @@ jobs:
               fi
               '
 
-          gh repo sync YoeDistro/yoe-distro
+          gh repo sync UmairAsghar-max/yoe-distro
 
           if [ -n "$(git status --porcelain)" ]; then
             if [ -n "$(gh pr list --head feature/layers-ref-update)" ]; then

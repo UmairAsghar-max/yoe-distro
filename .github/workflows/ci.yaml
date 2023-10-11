@@ -22,7 +22,6 @@ jobs:
           git submodule update --init --recursive
 
           gh repo sync yoedistro/meta-arm
-          gh repo sync https://github.com/yoedistro/meta-arm
 
           git submodule foreach '
               latest_release=$(git tag --sort=committerdate | grep -E '[0-9]' | tail -1)

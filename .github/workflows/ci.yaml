@@ -22,7 +22,7 @@ jobs:
           git submodule update --init --recursive
 
           echo "=================================================================================="
-          gh repo view git@github.com:UmairAsghar-max/yoe-distro.git --json isFork | grep -oP isFork:Kw+
+          gh repo view git@github.com:UmairAsghar-max/yoe-distro.git --json isFork | grep -o '"isFork":.*' | cut -d ':' -f2 | tr -d '}'
           echo "=================================================================================="
 
           git submodule foreach '
